@@ -10,8 +10,8 @@ local function download_file(path)
 end
 
 for _, file in ipairs({
-    "image.lua",
-    "component.lua",
+    "bin/image.lua",
+    "bin/component.lua",
 }) do
     download_file(file)
 end
