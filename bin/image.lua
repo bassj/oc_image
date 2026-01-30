@@ -17,6 +17,7 @@ end
 for _, file in ipairs({
     "/bin/image.lua",
     "/bin/component.lua",
+    "/bin/bee.lua",
 
     "/lib/bassj/text.lua",
 }) do
