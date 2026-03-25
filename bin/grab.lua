@@ -19,14 +19,12 @@ for _, dir in ipairs({
     end
 end
 
-for _, file in ipairs({
-    "/bin/image.lua",
-    "/bin/component.lua",
-    "/bin/grab.lua",
+local args = {...}
 
-    "/lib/json.lua",
-    "/lib/bassj/text.lua",
-    "/lib/bassj/datasink.lua"
-}) do
-    download_file(file)
+if #args < 1 then
+    print("Path Required")
+    return
 end
+
+local path = args[1]
+download_file(path)
