@@ -99,7 +99,7 @@ local beeSlot = tonumber(args[2]) or 1
 local stackInfo = transposer.getStackInSlot(side, beeSlot)
 
 if opts.v or opts.verbose then
-    bassj.text.pprint(stackInfo)
+    bassj.text.pprint(stackInfo["individual"])
 else
     print_bee_info(stackInfo)
 end
