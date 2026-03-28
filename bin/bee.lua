@@ -94,7 +94,13 @@ end
 
 local args, opts = shell.parse(...)
 
-local beeSlot = tonumber(args[1]) or 1
-local stackInfo = transposer.getStackInSlot(4, beeSlot)
+local side = tonumber(args[1]) or 1
+local beeSlot = tonumber(args[2]) or 1
+local stackInfo = transposer.getStackInSlot(side, beeSlot)
 
-print_bee_info(stackInfo)
+if opts.v or opts.verbose then
+    bassj.text.pprint(stackInfo)
+else
+    print_bee_info(stackInfo)
+end
+
